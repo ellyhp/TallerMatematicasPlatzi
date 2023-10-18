@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .font-anton{
+            font-family: 'Anton', sans-serif;
+        }
+    </style>
+
+    <div class="flex flex-col justify-center items-center mt-14">
+
+
+        <div class="flex items-center space-x-4 mb-5">
+            <img class="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/108765164?v=4" alt="">
+            <div class="font-medium dark:text-white">
+                <div class="text-gray-500">
+                    <a href="https://github.com/ellyhp" target="_blank">
+                        @ellygmr
+                    </a>
+                </div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">Create in Oct 2023</div>
+            </div>
+        </div>
+
+        <div class="flex gap-5 mb-10">
+
+            <div>
+                <div id="tooltip-html" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-blue-700">
+                    HTML
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <img data-tooltip-target="tooltip-html" class="w-10 h-10 p-1 rounded-full ring-2  dark:ring-gray-200 hover:ring-blue-600" src="img/html.png" alt="Bordered avatar">
+
+            </div>
+            <div>
+                <div id="tooltip-tailwind" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-blue-700">
+                    TailwindCSS
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <img data-tooltip-target="tooltip-tailwind" class="w-10 h-10 p-1 rounded-full ring-2  dark:ring-gray-200 hover:ring-blue-600" src="img/tailwind.png" alt="Bordered avatar">
+            </div>
+            <div>
+                <div id="tooltip-flowbite" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-blue-700">
+                    Flowbite
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <img data-tooltip-target="tooltip-flowbite" class="w-10 h-10 p-1 rounded-full ring-2  dark:ring-gray-200 hover:ring-blue-600" src="img/flowbite.png" alt="Bordered avatar">
+            </div>
+            <div>
+                <div id="tooltip-javascript" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-blue-700">
+                    Javascript
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <img data-tooltip-target="tooltip-javascript" class="w-10 h-10 p-1 rounded-full ring-2  dark:ring-gray-200 hover:ring-blue-600" src="img/javascript.webp" alt="Bordered avatar">
+            </div>
+
+        </div>
+
+        
+        <div class="max-w-2xl mx-auto">
+            
+            <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
+                <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Math</button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">Percentages</button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Statistics</button>
+                    </li>
+                    <li role="presentation">
+                        <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Salary analysis</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="myTabContent">
+                
+                <div class=" p-4 rounded-lg hidden flex  justify-center items-center flex-col" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    
+                   <div class="m-5">
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">
+                            Select the button do you want to calculate
+                        </p>
+                   </div>
+                   <div>
+                        <button type="button" id="btnRectangle" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Rectangle</button>
+                        <button type="button" id="btnTriangle" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Triangle</button>
+                        <button type="button" id="btnCircle" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Circle</button>
+                   </div>
+
+                    <div class="flex flex-col gap-5 items-center hidden" id="rectangleContent">
+                        <div class="flex  gap-10 p-10">
+                            <input min="0" value="0" type="number" id="baseRectangle" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="base"  required>
+                            <input min="0" value="0" type="number" id="heightRectangle" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="height" required>
+                        </div>
+                         <div id="alertRectangleContent" class="flex hidden items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:text-red-400" role="alert">
+                            <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                            </svg>
+                            <span class="sr-only">Info</span>
+                            <div>
+                                <p id="alertRectangle"></p>
+                            </div>
+                          </div>
+                        <div>
+                            <button id="btnResultRectangle" type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Calculate</button>
+                        </div>
+                        <div class="mt-4">
+                            <p id="resultRectangle" class="font-medium text-gray-500"></p>
+                        </div>
+                     </div>
+
+                     <div class="flex flex-col gap-5 items-center hidden" id="triangleContent">
+                        <div class="flex p-10 flex-col">
+                            <div class="flex gap-10 pb-5">
+                                <input value="0" type="number" id="baseTriangle" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="base"  required>
+                                <input value="0" type="number" id="heightTriangle" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="height" required>
+                            </div>
+                           <div class="flex gap-10 pb-5">
+                                <input value="0" type="number" id="side1Triangle" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="side 1" required>
+                                <input value="0" type="number" id="side2Triangle" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="side 2" required>
+                           </div>
+                        </div>
+                        <div id="alertTriangleContent" class="flex hidden items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:text-red-400" role="alert">
+                            <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                            </svg>
+                            <span class="sr-only">Info</span>
+                            <div>
+                                <p id="alertTriangle">You cannot leave empty fields</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="btnResultTriangle" type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Calculate</button>
+                        </div>
+                        <div class="mt-4">
+                            <p id="resultTriangle" class="font-medium text-gray-500"></p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-5 items-center hidden" id="circleContent">
+                        <div class="flex  gap-10 p-10">
+                            <input type="number" id="diameterCircle" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="diameter"  required>
+                        </div>
+                        <div id="alertCircleContent" class="flex hidden items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:text-red-400" role="alert">
+                            <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                            </svg>
+                            <span class="sr-only">Info</span>
+                            <div>
+                                <p id="alertCircle">Please, add a value</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="btnResultCircle" type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Calculate</button>
+                        </div>
+                        <div class="mt-4">
+                            <p id="resultCircle" class="font-medium text-gray-500"></p>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="p-4 rounded-lg " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <p class="text-gray-500 dark:text-gray-400 text-sm text-center mb-10">
+                        Add price and discount
+                    </p>
+                    <div class="flex flex-col gap-10">
+                        <div id="contentDiscount" class="flex gap-3 flex-col">
+                            <div class="flex gap-10">
+                                <input type="number" min="0"  id="price" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="price"  required>
+                                <input type="number" min="0" max="100"id="discount" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="discount"  required>
+                            </div>
+                            <div class="mt-4">
+                                <p id="resultDiscuount" class="font-medium text-gray-500 text-center"></p>
+                            </div>
+                            <div id="alertDiscountContent" class="flex hidden items-center p-4 text-sm text-red-800 rounded-lg bg-red-50 dark:text-red-400" role="alert">
+                                <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                                </svg>
+                                <span class="sr-only">Info</span>
+                                <div class="flex gap-2">
+                                  <p id="alertDiscount"></p> 
+                                </div>
+                              </div>
+                            <button type="button" id="btnDiscount" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Calculate</button>
+                        </div>
+                        <button type="button" id="btnHaveCopun" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm shadow-lg  px-5 py-2.5 text-center mr-2 mb-2">I have a coupun</button>
+                        
+                      <div id="contentCoupon" class="flex gap-10 flex-col hidden">
+                            <div class="flex gap-10">
+                                <input type="number" id="priceCoupon" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="price"  required>
+                                <div class="relative w-full">
+                                    <input type="text" id="couponInput" class="border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 shadow-lg shadow-blue-500/50 pl-10" placeholder="coupon: ellygmr" required>
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <!-- Add your icon here -->
+                                    <i class="fa-solid fa-tag text-orange-500"></i>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div id="alertComponent" class="hidden p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50  dark:text-red-400" role="alert">
+                                <span id="alertCoupun" class="font-medium"></span>
+                            </div>
+
+                            <div class="mt-4 hidden"  id="resultContentCoupon">
+                                <p id="resultCoupon" class="font-medium text-gray-500 text-center"></p>
+                            </div>
+
+                            <button type="button" id="btnDiscountCoupon" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Calculate</button>
+                      </div>
+                    </div>
+                    
+                </div>
+
+                <div class="p-4 rounded-lg hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+
+                    <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border rounded-lg sm:flex dark:border-white dark:text-white">
+                        <li class="w-full">
+                            <div class="flex items-center pl-3">
+                                <input id="horizontal-list-radio-license" type="radio" value="radio1" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-white dark:border-gray-500">
+                                <label for="horizontal-list-radio-license" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-400">Median</label>
+                            </div>
+                        </li>
+                        <li class="w-full 0 sm:border-b-0" >
+                            <div class="flex items-center pl-3">
+                                <input  id="horizontal-list-radio-id" value="radio2" type="radio" name="list-radio" class=" w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-white dark:border-gray-500">
+                                <label for="horizontal-list-radio-id" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-400">Mean</label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-white sm:border-b-0 sm:border-r ">
+                            <div class="flex items-center pl-3">
+                                <input id="horizontal-list-radio-millitary" type="radio" value="radio3" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-white dark:border-gray-500">
+                                <label for="horizontal-list-radio-millitary" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-400">Mode</label>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                  <div class="w-100 mt-10">
+                        <div class="grid grid-cols-4 gap-5 mb-5" id="newInput">
+                            <input value="0" type="number" class="inputStatistics border border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="value"  required>
+                            <input value="0" type="number"  class="inputStatistics white border-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  shadow-lg shadow-blue-500/50" placeholder="value"  required>                
+                        </div>
+                        <div id="alertStatistics" class="hidden p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:text-red-400"  role="alert">
+                            <p>
+                                You must add at least two fields
+                            </p>
+                        </div>
+                        <div class="mt-10 flex justify-between">
+                            <button id="remove" type="button" class="w-full text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">-</button>
+                            <button id="plus" type="button" class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">+</button>
+                        </div>
+                        <div class="mt-5">
+                            <button id="resultStatistics" type="button" class="w-full text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Result</button>
+                        </div>
+    
+                        <div class="mt-4 hidden"  id="resultMeanContent">
+                            <p id="resultMeanInput" class="font-medium text-gray-500 text-center"></p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <div class="bg-white p-4 rounded-lg hidden flex flex-col" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+
+                    <div class="flex">
+                        <figure data-modal-toggle="default-modal" class="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+                            <a href="#">
+                                <img class="rounded-lg" src="img/person.jpg" alt="image description" >
+                            </a>
+        
+                            <figcaption class="absolute px-4 text-lg top-1 w-full text-center">
+                                <h2 class="text-4xl font-black text-blue-700 font-anton">Data per person</h2>
+                            </figcaption>
+                            </figure>
+        
+                        <figure data-modal-toggle="default-modal2" class="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+                                <a href="#">
+                                    <img class="rounded-lg" src="img/compy.jpg" alt="image description" >
+                                </a>
+            
+                                <figcaption class="absolute px-4 text-lg bottom-10 w-full text-center">
+                                    <h2 class="text-4xl font-black text-gray-100 font-anton">Company data</h2>
+                                </figcaption>
+                        </figure>
+                    </div>
+
+                <div>
+
+
+        <!-- Main modal -->
+                    <div id="default-modal" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+                        <div class="relative w-full max-w-2xl px-4 h-full md:h-auto">
+                            <!-- Modal content -->
+                            <div class="bg-white rounded-lg shadow relative ">
+                                <!-- Modal header -->
+                                <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-200">
+                                    <h3 class=" text-xl lg:text-2xl font-semibold text-blue-700">
+                                        Data per person
+                                    </h3>
+                                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="default-modal">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="p-6 space-y-6 flex flex-col items-center justify-center">
+
+                                    <div>
+                                        <div class="flex items-center flex-col justify-center">
+                                            <img class="w-16" src="img/user.jpg" alt="">
+                                            <h4 class="text-gray-600" id="nameUsertxt"></h4>
+                                            <p class="text-gray-400">Last job: <span class="text-red-400" id="lastJobUser"></span></p>
+                                        </div>
+                                    <div class="mt-10">
+
+                                        <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+                                            <li class="pb-3 sm:pb-4" id="CompanyUserName">
+                                         
+                                            </li>
+                                        </ul>
+                                        
+                                        
+
+                                    </div>
+
+                                    <div class="flex">
+                                        
+                                            <div class="relative overflow-x-auto">
+                                                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                                    <thead class="text-xs text-gray-700 uppercase dark:bg-white dark:text-gray-400">
+                                                        <tr>
+                                                            <th scope="col" class="px-6 py-3">
+                                                                Median Salary
+                                                            </th>
+                                                            <th scope="col" class="px-6 py-3">
+                                                                Next Salary
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="contentMedian">
+    
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                    </div>
+
+                                    </div>
+                                    
+                                    <div class="p-6 w-full">
+                                        <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-500">Select an user</label>
+                                        <select onchange="getOption()"  id="contentUsersSalary" size="5" class="greet border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-200 dark:placeholder-gray-400 dark:text-gray-500 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                                        </select>
+                                    </div>
+                                    <button id="btnMedianUser"  type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Calculate</button>
+                                </div>
+
+                                
+ 
+                            </div>
+                        </div>
+                    </div>
+
+        <!-- Main modal 2 -->
+
+        <div id="default-modal2" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+            <div class="relative w-full max-w-2xl px-4 h-full md:h-auto">
+                <!-- Modal content -->
+                <div class="bg-white rounded-lg shadow relative ">
+                    <!-- Modal header -->
+                    <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-200">
+                        <h3 class=" text-xl lg:text-2xl font-semibold text-blue-700">
+                            Data per person
+                        </h3>
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="default-modal2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-6 space-y-6 flex flex-col items-center justify-center">
+                        <div>
+                            <div class="flex items-center flex-col justify-center" >
+                                <img class="w-16" src="img/condominium-ai.png" alt="">
+                                <div id="name-company">
+
+                                </div>
+                            </div>
+                        <div class="mt-10" >
+
+                            <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+                                <li class="pb-3 sm:pb-4">
+                                    <div class="flex items-top justify-center space-x-4 gap-3">
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-sm text-gray-500 truncate" id="divUlCompanySalary">
+                                               
+                                            </p>
+                                        </div>
+    
+                                    </div>
+                                </li>
+                           </ul>
+                            
+                            
+
+                        </div>
+<!-- 
+                        <div class="flex">
+                            
+                                <div class="relative overflow-x-auto">
+                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                        <thead class="text-xs text-gray-700 uppercase dark:bg-white dark:text-gray-400">
+                                            <tr>
+                                                <th scope="col" class="px-6 py-3 text-gray-600">
+                                                    Year
+                                                </th>
+                                                <th scope="col" class="px-6 py-3 text-gray-600">
+                                                   Median Salary
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="bg-white border-b dark:bg-white dark:border-gray-300">
+                                                <td class="px-6 py-4">
+                                                    2019
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    $1800
+                                                </td>
+                                            </tr>
+                                            <tr class="bg-white border-b dark:bg-white dark:border-gray-300">
+                                                <td class="px-6 py-4">
+                                                    2020
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    $2100
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div> -->
+
+                        <!-- <div class="m-5 text-sm"> 
+                            <p class="text-gray-500">Next salary</p>
+                            <p class="text-green-600 font-bold">$3000</p>
+                        </div> -->
+
+                        </div>
+                        
+                        <div class="p-6 w-full">
+                            <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-500">Select an user</label>
+                            <select  onchange="getOptionCompany()" id="selectCompany" size="5" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-200 dark:placeholder-gray-400 dark:text-gray-500 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <!-- <option value="1">Freelance</option> -->
+                            </select>
+                        </div>
+                        <button id="btnCalculateCompany" type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Calculate</button>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+
+        
+                                
+                </div>
+
+                        </div>
+                    </div>
+                
+                </div>
+
+            </div>
+    
+   
+    <script src="scripts/statistics.js"></script>
+    <script src="scripts/wages.js"></script>
+    <script src="scripts/analysis.js"></script>
+    <script src="scripts/statistics-analysis.js"></script>
+    <script src="scripts/percentages.js"></script>
+    <script src="https://kit.fontawesome.com/aaa255130f.js" crossorigin="anonymous"></script>
+    <script src="scripts/figures.js"></script>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
